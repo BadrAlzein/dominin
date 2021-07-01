@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.btu.swp.dominion.game.MainMenuCon">
+   <children>
+      <BorderPane fx:id="mainBorderC">
+         <center>
+            <Group>
+               <children>
+                  <VBox alignment="CENTER" prefHeight="900.0" prefWidth="1600.0" spacing="30.0">
+                     <children>
+                        <HBox alignment="CENTER" spacing="25.0">
+                           <children>
+                              <Label prefHeight="38.0" prefWidth="138.0" styleClass="textOnBlack" text="Spielername">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="spielerName" prefHeight="26.0" prefWidth="300.0" promptText="username" styleClass="animatedTextfield" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" spacing="25.0">
+                           <children>
+                              <Label prefHeight="38.0" prefWidth="142.0" styleClass="textOnBlack" text="Spieleranzahl">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <MenuButton fx:id="menuButtonSpielerAnzahl" mnemonicParsing="false" prefHeight="26.0" prefWidth="300.0" styleClass="animatedTextfield" text="2">
+                                <items>
+                                  <MenuItem fx:id="anzSpiel2" mnemonicParsing="false" onAction="#anzSpiel2Clicked" text="2" />
+                                  <MenuItem fx:id="anzSpiel3" mnemonicParsing="false" onAction="#anzSpiel3Clicked" text="3" />
+                                    <MenuItem fx:id="anzSpiel4" mnemonicParsing="false" onAction="#anzSpiel4Clicked" text="4" />
+                                </items>
+                              </MenuButton>
+                           </children>
+                        </HBox>
+                  
+                        <Button fx:id="goToLobbySpielErstellenClicked" mnemonicParsing="false" onMouseClicked="#goToLobbySpielErstellenClicked" prefHeight="59.0" prefWidth="141.0" text="erstellen">
+                           <styleClass>
+                              <String fx:value="animatedBtn" />
+                              <String fx:value="label" />
+                           </styleClass></Button>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="15.0" layoutY="15.0" styleClass="settingsBtnBox">
+                     <children>
+                        <ImageView fx:id="backArrow" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#backArrowClicked" pickOnBounds="true" preserveRatio="true" styleClass="settingsBtnBox">
+                           <image>
+                              <Image url="@../icons/backBtnGreenArrow.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+               </children>
+            </Group>
+         </center>
+      </BorderPane>
+
+
+   </children>
+   <stylesheets>
+      <URL value="@../CSS/Settings.css" />
+      <URL value="@../CSS/generalStylesheet.css" />
+   </stylesheets>
+</AnchorPane>

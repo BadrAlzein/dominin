@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.btu.swp.dominion.game.SettingCon">
+   <children>
+      <BorderPane fx:id="mainBorder" prefHeight="900.0" prefWidth="1600.0">
+         <center>
+            <StackPane>
+               <children>
+                  <Group>
+                     <children>
+                        <VBox layoutX="55.0" layoutY="156.0" spacing="40.0">
+                           <children>
+                              <HBox prefHeight="35.0" prefWidth="616.0" spacing="100.0">
+                                 <children>
+                                    <Label contentDisplay="CENTER" prefHeight="35.0" prefWidth="217.0" styleClass="textOnBlack" text="Auflösung: ">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <MenuButton fx:id="item" mnemonicParsing="false" prefHeight="47.0" prefWidth="463.0" styleClass="animatedTextfield" text="1600 x 900 (16:9)">
+                                      <items>
+                                          <MenuItem fx:id="item1" mnemonicParsing="false" onAction="#solution" text="1920 x 1440 (4:3)" />
+                                          <MenuItem fx:id="item2" mnemonicParsing="false" onAction="#solution" text="1920 x 1080 (16:9)" />
+                                        <MenuItem fx:id="item3" mnemonicParsing="false" onAction="#solution" text="1600 x 900 (16:9)" />
+                                          <MenuItem fx:id="item4" mnemonicParsing="false" onAction="#solution" text="1280×720 (16:9)" />
+                                        <MenuItem fx:id="item5" mnemonicParsing="false" onAction="#solution" text="800 x 600 (4:3)" />
+                                      </items>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </MenuButton>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="35.0" prefWidth="616.0" spacing="100.0">
+                                 <children>
+                                    <Label contentDisplay="CENTER" prefHeight="35.0" prefWidth="217.0" styleClass="textOnBlack" text="Modus: ">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <MenuButton fx:id="bar" mnemonicParsing="false" prefHeight="47.0" prefWidth="463.0" styleClass="animatedTextfield" text="Fenster">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <items>
+                                          <MenuItem fx:id="bar1" mnemonicParsing="false" onAction="#modus" text="Fenster" />
+                                          <MenuItem fx:id="bar2" mnemonicParsing="false" onAction="#modus" text="Vollbild" />
+                                       </items>
+                                    </MenuButton>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="35.0" prefWidth="616.0" spacing="100.0">
+                                 <children>
+                                    <HBox>
+                                       <children>
+                                          <Label contentDisplay="CENTER" prefHeight="67.0" prefWidth="242.0" styleClass="textOnBlack" text="Musik: ">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="68.0" prefWidth="491.0">
+                                       <children>
+                                          <VBox prefHeight="60.0" prefWidth="52.0" styleClass="settingsBtnBox">
+                                             <children>
+                                                <ImageView fx:id="volumeBtn" fitHeight="50.0" fitWidth="45.0" onMousePressed="#volumeHandler" pickOnBounds="true" preserveRatio="true" styleClass="settingsBtnBox">
+                                                   <image>
+                                                      <Image url="@../icons/icons8-audio.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <HBox alignment="CENTER" styleClass="settingsBtnBox">
+                           <children>
+                              <ImageView fx:id="back" fitHeight="50.0" fitWidth="40.0" onMouseClicked="#btnBackClicked" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/backBtnGreenArrow.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <Button fx:id="save" layoutX="1146.0" layoutY="682.0" mnemonicParsing="false" onMouseClicked="#btnSaveClicked" prefHeight="100.0" prefWidth="250.0" text="Speichern">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="animatedBtn" />
+                              <String fx:value="label" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                     <StackPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </StackPane.margin>
+                  </Group>
+               </children>
+            </StackPane>
+         </center>
+      </BorderPane>
+   </children>
+   <stylesheets>
+      <URL value="@../CSS/Settings.css" />
+      <URL value="@../CSS/generalStylesheet.css" />
+   </stylesheets>
+</AnchorPane>

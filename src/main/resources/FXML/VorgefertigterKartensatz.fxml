@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.btu.swp.dominion.game.CardMenuCon">
+   <children>
+      <BorderPane fx:id="mainBorderVor" prefHeight="900.0" prefWidth="1600.0">
+         <center>
+            <StackPane stylesheets="@../CSS/generalStylesheet.css">
+               <children>
+                  <Group>
+                     <children>
+                        <HBox spacing="25.0">
+                           <children>
+                              <VBox styleClass="settingsBtnBox">
+                                 <children>
+                                    <ImageView fx:id="innerBackArrow" fitHeight="60.0" fitWidth="58.0" onMouseClicked="#backArrowSettingClicked" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/backBtnGreenArrow.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </VBox>
+                              <Label styleClass="textOnBlack" text="Vorgefertigter Kartensatz">
+                                 <font>
+                                    <Font size="29.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="35.0" layoutY="93.0" prefHeight="766.0" prefWidth="1500.0" styleClass="scrollpanel">
+                           <children>
+                              <ScrollPane prefHeight="766.0" prefWidth="807.0" styleClass="scrollpanel">
+                                 <content>
+                                    <AnchorPane prefHeight="692.0" prefWidth="519.0" style="-fx-background-color: transparent;">
+                                       <children>
+                                          <VBox prefHeight="512.0" prefWidth="520.0" spacing="50.0" style="-fx-padding: 20;">
+                                             <children>
+                                                <VBox spacing="20.0" styleClass="vorgefertigteStack">
+                                                   <children>
+                                                      <HBox alignment="CENTER_LEFT">
+                                                         <children>
+                                                            <Label prefHeight="47.0" prefWidth="165.0" styleClass="textOnVorgefertigte" text="Großes Geld">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <ImageView fx:id="grossesGeldBtn" accessibleRole="BUTTON" fitHeight="41.0" fitWidth="66.0" onMousePressed="#SaveCards" pickOnBounds="true" preserveRatio="true" styleClass="animatedBtn">
+                                                               <image>
+                                                                  <Image url="@../icons/icons8-save.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox spacing="30.0">
+                                                         <children>
+                                                            <ImageView fx:id="DorfKarteGrossesGeld" fitHeight="150.0" fitWidth="150.0" onMouseEntered="#zoomIn" onMouseExited="#zoomOut" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../basis/Dorf.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                            <ImageView fx:id="SchmiedeKarteGrossesGeld" fitHeight="150.0" fitWidth="150.0" onMouseEntered="#zoomIn" onMouseExited="#zoomOut" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../basis/Schmiede.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                            <ImageView fx:id="HolzfaellerKarteGrossesGeld" fitHeight="150.0" fitWidth="150.0" onMouseEntered="#zoomIn" onMouseExited="#zoomOut" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../basis/Holzfaeller.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </padding>
+                                                </VBox>
+                                                <VBox spacing="20.0" styleClass="vorgefertigteStack">
+                                                   <children>
+                                                      <HBox alignment="CENTER_LEFT">
+                                                         <children>
+                                                            <Label prefHeight="47.0" prefWidth="171.0" styleClass="textOnVorgefertigte" text="Erstes Spiel">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <ImageView fx:id="erstesSpielBtn" accessibleRole="BUTTON" fitHeight="41.0" fitWidth="66.0" onMousePressed="#SaveCards" pickOnBounds="true" preserveRatio="true" styleClass="animatedBtn">
+                                                               <image>
+                                                                  <Image url="@../icons/icons8-save.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox prefHeight="20.0" prefWidth="779.0" spacing="30.0">
+                                                         <children>
+                                                            <ImageView fx:id="DorfKarte" fitHeight="150.0" fitWidth="150.0" onMouseEntered="#zoomIn" onMouseExited="#zoomOut" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../basis/Dorf.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                            <ImageView fx:id="SchmiedeKarte" fitHeight="150.0" fitWidth="150.0" onMouseEntered="#zoomIn" onMouseExited="#zoomOut" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../basis/Schmiede.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                            <ImageView fx:id="HolzfaellerKarte" fitHeight="150.0" fitWidth="150.0" onMouseEntered="#zoomIn" onMouseExited="#zoomOut" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../basis/Holzfaeller.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                            <ImageView fitHeight="150.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../basis/Kapelle.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </padding>
+                                                </VBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </HBox>
+                     </children>
+                     <StackPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </StackPane.margin>
+                  </Group>
+               </children>
+            </StackPane>
+         </center>
+      </BorderPane>
+   </children>
+   <stylesheets>
+      <URL value="@../CSS/Settings.css" />
+      <URL value="@../CSS/generalStylesheet.css" />
+   </stylesheets>
+</AnchorPane>

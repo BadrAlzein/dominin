@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseMoved="#goToMain" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.btu.swp.dominion.game.GameEndCon">
+   <children>
+      <BorderPane fx:id="mainBorder" prefHeight="900.0" prefWidth="1600.0">
+         <center>
+            <VBox alignment="CENTER" spacing="20.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefWidth="1500.0">
+                     <children>
+                        <Label prefHeight="75.0" prefWidth="395.0" styleClass="gameOverTitel" text="Spiel ist vorbei!">
+                           <font>
+                              <Font size="87.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="50.0" left="50.0" />
+                     </padding>
+                  </VBox>
+                  <HBox fx:id="pointsHbox" alignment="CENTER" spacing="100.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="197.0" prefWidth="169.0" visible="false">
+                           <children>
+                              <ImageView fitHeight="112.0" fitWidth="112.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../GameOverPics/icons8-medal_first_place.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="playerOne" style="-fx-font-size: 25;" styleClass="textOnBlack" text="player1">
+                                 <font>
+                                    <Font size="62.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="pointsPlayerOne" style="-fx-font-size: 20;" styleClass="textOnBlack" text="XX Punkte">
+                                 <font>
+                                    <Font size="62.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" visible="false">
+                           <children>
+                              <StackPane>
+                                 <children>
+                                    <VBox alignment="CENTER" prefHeight="131.0" prefWidth="116.0">
+                                       <children>
+                                          <ImageView fitHeight="68.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../GameOverPics/icons8-medal_second_place.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label fx:id="playerTwo" style="-fx-font-size: 20;" styleClass="textOnBlack" text="Player2">
+                                             <font>
+                                                <Font size="62.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="pointsTwo" style="-fx-font-size: 20;" styleClass="textOnBlack" text="XX Punkte">
+                                             <font>
+                                                <Font size="62.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </StackPane>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </VBox>
+                        <VBox fx:id="playerThreeVbox" alignment="CENTER" visible="false">
+                           <children>
+                              <StackPane>
+                                 <children>
+                                    <VBox alignment="CENTER" prefHeight="150.0" prefWidth="145.0">
+                                       <children>
+                                          <ImageView fitHeight="68.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../GameOverPics/icons8-medal_third_place.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label fx:id="playerThree" style="-fx-font-size: 20;" styleClass="textOnBlack" text="Player3">
+                                             <font>
+                                                <Font size="62.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="pointsThree" style="-fx-font-size: 20;" styleClass="textOnBlack" text="XX Punkte">
+                                             <font>
+                                                <Font size="62.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="fourthPlayerVbox" alignment="CENTER" visible="false">
+                           <children>
+                              <StackPane>
+                                 <children>
+                                    <VBox alignment="CENTER">
+                                       <children>
+                                          <ImageView fitHeight="69.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../GameOverPics/icons8-hand_up.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label fx:id="playerFour" style="-fx-font-size: 20;" styleClass="textOnBlack" text="player4">
+                                             <font>
+                                                <Font size="62.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="pointsPlayerFour" style="-fx-font-size: 20;" styleClass="textOnBlack" text="XX Punkte">
+                                             <font>
+                                                <Font size="62.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" spacing="90.0">
+                     <children>
+                        <Button fx:id="gameendBtn" mnemonicParsing="false" onMouseClicked="#gameendBtnClicked" prefHeight="65.0" prefWidth="254.0" text="zum Hauptmenu">
+                           <styleClass>
+                              <String fx:value="animatedBtn" />
+                              <String fx:value="label" />
+                           </styleClass>
+                        </Button>
+                        <Button mnemonicParsing="false" onMouseClicked="#exitSpielHandler" prefHeight="65.0" prefWidth="213.0" text="Spiel verlassen">
+                           <styleClass>
+                              <String fx:value="exitBtn" />
+                              <String fx:value="label" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+   <stylesheets>
+      <URL value="@../CSS/GameEnd.css" />
+      <URL value="@../CSS/generalStylesheet.css" />
+   </stylesheets>
+</AnchorPane>

@@ -1,0 +1,10 @@
+.root {
+    -fx-background-image: url("/src/main/resources/backgrounds/TW3_screen-Novigrad.png");
+    -fx-background-size: cover;
+}
+
+.gameOverTitel {
+    -fx-font-size: 40;
+    -fx-font-family: "Apple Chancery";
+    -fx-text-fill: white;
+}

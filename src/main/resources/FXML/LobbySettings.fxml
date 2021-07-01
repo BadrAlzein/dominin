@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.btu.swp.dominion.game.CardMenuCon">
+   <children>
+      <BorderPane fx:id="mainBorderC">
+         <center>
+            <Group>
+               <children>
+                  <VBox prefHeight="900.0" prefWidth="1600.0" spacing="30.0">
+                     <children>
+                        <VBox alignment="CENTER" layoutY="500.0" prefHeight="905.0" prefWidth="1600.0" spacing="30.0">
+                           <children>
+                              <Label prefHeight="47.0" prefWidth="559.0" styleClass="textOnBlack" text="Kartensatz">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="CENTER" prefHeight="33.0" prefWidth="1328.0" spacing="50.0">
+                                 <children>
+                                    <Label prefHeight="47.0" prefWidth="349.0" styleClass="textOnBlack" text="vorgefertigter Kartensatz">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox alignment="CENTER" styleClass="settingsLightBtnBox">
+                                       <children>
+                                          <ImageView fx:id="vorgefertigtButton" fitHeight="38.0" fitWidth="44.0" onMouseClicked="#vorgefertigtKartenClicked" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../icons/128x128.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </HBox>
+                                    <ImageView fx:id="vorgefertigtZeiger" fitHeight="50.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                       <image>
+                                          <Image url="@../icons/icons8-checkmark.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" spacing="50.0">
+                                 <children>
+                                    <Label prefHeight="47.0" prefWidth="350.0" styleClass="textOnBlack" text="zufälliger Kartensatz">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox alignment="CENTER" styleClass="settingsLightBtnBox">
+                                       <children>
+                                          <ImageView fx:id="zufalligKartenButton" fitHeight="38.0" fitWidth="44.0" onMouseClicked="#zufalligKartenClicked" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../icons/128x128.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </HBox>
+                                    <ImageView fx:id="zufalligKartenZeiger" fitHeight="50.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/icons8-checkmark.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" spacing="50.0">
+                                 <children>
+                                    <Label prefHeight="47.0" prefWidth="351.0" styleClass="textOnBlack" text="selbstgewählter Kartensatz">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox alignment="CENTER" styleClass="settingsLightBtnBox">
+                                       <children>
+                                          <ImageView fx:id="selbgewKarten" fitHeight="38.0" fitWidth="44.0" onMousePressed="#selbstgewClicked" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../icons/128x128.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </HBox>
+                                    <ImageView fx:id="selbgewKartenZeiger" fitHeight="50.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                       <image>
+                                          <Image url="@../icons/icons8-checkmark.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                              <Label prefHeight="47.0" prefWidth="553.0" styleClass="textOnBlack" text="Reihenfolge">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <HBox fx:id="HostHBox" alignment="CENTER" prefHeight="31.0" prefWidth="780.0" spacing="50.0">
+                                 <children>
+                                    <Label fx:id="HostLabel" prefHeight="47.0" prefWidth="356.0" styleClass="textOnBlack" text="Host">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <MenuButton fx:id="rankHost" mnemonicParsing="false" prefHeight="31.0" prefWidth="156.0" styleClass="animatedTextfield" text="1">
+                                       <items>
+                                          <MenuItem fx:id="hostRankOne" mnemonicParsing="false" onAction="#rank" text="1" />
+                                          <MenuItem fx:id="hostRankTwo" mnemonicParsing="false" onAction="#rank" text="2" visible="false" />
+                                          <MenuItem fx:id="hostRankThree" mnemonicParsing="false" onAction="#rank" text="3" visible="false" />
+                                          <MenuItem fx:id="hostRankFour" mnemonicParsing="false" onAction="#rank" text="4" visible="false" />
+                                       </items>
+                                    </MenuButton>
+                                 </children>
+                              </HBox>
+                              <HBox fx:id="PlayerTwoHBox" alignment="CENTER" spacing="50.0" visible="false">
+                                 <children>
+                                    <Label fx:id="PlayerTwoLabel" prefHeight="47.0" prefWidth="355.0" styleClass="textOnBlack" text="player2">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <MenuButton fx:id="rankPlayerTwo" mnemonicParsing="false" prefHeight="31.0" prefWidth="156.0" styleClass="animatedTextfield" text="2">
+                                       <items>
+                                          <MenuItem fx:id="playerTwoRankOne" mnemonicParsing="false" onAction="#rank" text="1" />
+                                          <MenuItem fx:id="playerTwoRankTwo" mnemonicParsing="false" onAction="#rank" text="2" />
+                                          <MenuItem fx:id="playerTwoRankThree" mnemonicParsing="false" onAction="#rank" text="3" visible="false" />
+                                          <MenuItem fx:id="playerTwoRankFour" mnemonicParsing="false" onAction="#rank" text="4" visible="false" />
+                                       </items>
+                                    </MenuButton>
+                                 </children>
+                              </HBox>
+                              <HBox fx:id="PlayerThreeHBox" alignment="CENTER" spacing="50.0" visible="false">
+                                 <children>
+                                    <Label fx:id="PlayerThreeLabel" prefHeight="47.0" prefWidth="356.0" styleClass="textOnBlack" text="player3">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <MenuButton fx:id="rankPlayerThree" mnemonicParsing="false" prefHeight="31.0" prefWidth="156.0" styleClass="animatedTextfield" text="3">
+                                       <items>
+                                          <MenuItem fx:id="playerThreeRankOne" mnemonicParsing="false" onAction="#rank" text="1" />
+                                          <MenuItem fx:id="playerThreeRankTwo" mnemonicParsing="false" onAction="#rank" text="2" />
+                                          <MenuItem fx:id="playerThreeRankThree" mnemonicParsing="false" onAction="#rank" text="3" />
+                                          <MenuItem fx:id="playerThreeRankFour" mnemonicParsing="false" onAction="#rank" text="4" visible="false" />
+                                       </items>
+                                    </MenuButton>
+                                 </children>
+                              </HBox>
+                              <HBox fx:id="PlayerFourHBox" alignment="CENTER" spacing="50.0" visible="false">
+                                 <children>
+                                    <Label fx:id="PlayerFourLabel" prefHeight="47.0" prefWidth="357.0" styleClass="textOnBlack" text="player4">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <MenuButton fx:id="rankPlayerFour" mnemonicParsing="false" prefHeight="31.0" prefWidth="156.0" styleClass="animatedTextfield" text="4">
+                                       <items>
+                                          <MenuItem fx:id="playerFourRankOne" mnemonicParsing="false" onAction="#rank" text="1" />
+                                          <MenuItem fx:id="playerFourRankTwo" mnemonicParsing="false" onAction="#rank" text="2" />
+                                          <MenuItem fx:id="playerFourRankThree" mnemonicParsing="false" onAction="#rank" text="3" />
+                                          <MenuItem fx:id="playerFourRankFour" mnemonicParsing="false" onAction="#rank" text="4" />
+                                       </items>
+                                    </MenuButton>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <HBox layoutX="15.0" layoutY="15.0" spacing="25.0">
+                     <children>
+                        <HBox alignment="CENTER" styleClass="settingsBtnBox">
+                           <children>
+                              <ImageView fx:id="backArrow" fitHeight="56.0" fitWidth="40.0" onMouseClicked="#backArrowSettingClicked" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/backBtnGreenArrow.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <Label styleClass="textOnBlack" text="Host Einstellungen">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Button fx:id="SaveInLobbySettings" contentDisplay="CENTER" layoutX="1252.0" layoutY="750.0" mnemonicParsing="false" onMouseClicked="#saveInLobbySettingsHandler" prefHeight="100.0" prefWidth="298.0" style="-fx-alignment: Center;" text="Speichern" textAlignment="CENTER">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <styleClass>
+                        <String fx:value="animatedBtn" />
+                        <String fx:value="label" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </Group>
+         </center>
+      </BorderPane>
+   </children>
+   <stylesheets>
+      <URL value="@../CSS/Settings.css" />
+      <URL value="@../CSS/generalStylesheet.css" />
+   </stylesheets>
+</AnchorPane>

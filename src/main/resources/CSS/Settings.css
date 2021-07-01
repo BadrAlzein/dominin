@@ -1,0 +1,17 @@
+.root {
+    -fx-background-image: url("/src/main/resources/backgrounds/raphael-lacoste-ifx-final-rlacoste-10years.png");
+    -fx-background-size: cover;
+    -fx-font-family: "Apple Chancery";
+}
+
+.label {
+    -fx-font-family: "Apple Chancery";
+}
+
+.volumSlideranimated {
+    -fx-background-radius: 30;
+    -fx-background-color: #e5e5e5;
+    -fx-padding: 13;
+    -fx-border-color: #c9c9c9;
+    -fx-border-radius: 30;
+}

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.btu.swp.dominion.game.CardMenuCon">
+   <children>
+      <BorderPane fx:id="mainBorderSel" prefHeight="900.0" prefWidth="1600.0">
+         <center>
+            <Group>
+               <children>
+                  <VBox>
+                     <children>
+                        <HBox spacing="25.0">
+                           <children>
+                              <VBox styleClass="settingsBtnBox">
+                                 <children>
+                                    <ImageView fx:id="innerBackArrow" fitHeight="55.0" fitWidth="56.0" onMouseClicked="#backArrowSettingClicked" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/backBtnGreenArrow.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </VBox>
+                              <Label styleClass="textOnBlack" text="Selbstgewählter Kartensatz">
+                                 <font>
+                                    <Font size="29.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="675.0" prefWidth="1500.0" styleClass="scrollpanel" stylesheets="@../CSS/generalStylesheet.css">
+                           <children>
+                              <ScrollPane prefHeight="675.0" prefWidth="775.0" styleClass="scrollpanel">
+                                 <content>
+                                    <VBox alignment="CENTER">
+                                       <children>
+                                          <HBox prefHeight="158.0" prefWidth="738.0" spacing="10.0">
+                                             <children>
+                                                <VBox fx:id="DorfVbox" alignment="CENTER" prefHeight="167.0" prefWidth="114.0" style="-fx-padding: 10;">
+                                                   <children>
+                                                      <ImageView fx:id="dorfKarte" fitHeight="150.0" fitWidth="94.0" onMouseEntered="#zoomIn" onMouseExited="#zoomOut" onMousePressed="#selectCard" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../basis/Dorf.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </VBox>
+                                                <VBox fx:id="SchmiedeVBox" alignment="CENTER" style="-fx-padding: 10;">
+                                                   <children>
+                                                      <ImageView fx:id="schmiedeKarte" fitHeight="150.0" fitWidth="150.0" onMouseEntered="#zoomIn" onMouseExited="#zoomOut" onMousePressed="#selectCard" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../basis/Schmiede.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </VBox>
+                                                <VBox fx:id="HolzFaellerVBox" alignment="CENTER" style="-fx-padding: 10;">
+                                                   <children>
+                                                      <ImageView fx:id="holzfaellerKarte" fitHeight="150.0" fitWidth="150.0" onMouseEntered="#zoomIn" onMouseExited="#zoomOut" onMousePressed="#selectCard" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../basis/Holzfaeller.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </VBox>
+                                                <VBox fx:id="laboratoriumVBox" alignment="CENTER" style="-fx-padding: 10;">
+                                                   <children>
+                                                      <ImageView fx:id="laboratoriumKarte" fitHeight="150.0" fitWidth="150.0" onMouseEntered="#zoomIn" onMouseExited="#zoomOut" onMousePressed="#selectCard" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../basis/Laboratorium.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </VBox>
+                                                <VBox fx:id="libVBox" alignment="CENTER" style="-fx-padding: 10;">
+                                                   <children>
+                                                      <ImageView fx:id="libKarte" fitHeight="150.0" fitWidth="150.0" onMouseEntered="#zoomIn" onMouseExited="#zoomOut" onMousePressed="#selectCard" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../basis/Bibliothek.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </VBox>
+                                                <VBox fx:id="KanzlerVBox" alignment="CENTER" style="-fx-padding: 10;">
+                                                   <children>
+                                                      <ImageView fx:id="kanzlerKarte" fitHeight="150.0" fitWidth="94.0" onMouseEntered="#zoomIn" onMouseExited="#zoomOut" onMousePressed="#selectCard" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../basis/Kanzler.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox spacing="10.0">
+                                             <children>
+                                                <VBox fx:id="AbenteurerVBox" alignment="CENTER" style="-fx-padding: 10;">
+                                                   <children>
+                                                      <ImageView fx:id="abenteurerKarte" fitHeight="150.0" fitWidth="94.0" onMouseEntered="#zoomIn" onMouseExited="#zoomOut" onMousePressed="#selectCard" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../basis/Abenteurer.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </VBox>
+                                                <VBox fx:id="MarktVBox" alignment="CENTER" style="-fx-padding: 10;">
+                                                   <children>
+                                                      <ImageView fx:id="marktKarte" fitHeight="150.0" fitWidth="94.0" onMouseEntered="#zoomIn" onMouseExited="#zoomOut" onMousePressed="#selectCard" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../basis/Markt.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </VBox>
+                                                <VBox fx:id="JahrmarktVBox" alignment="CENTER" style="-fx-padding: 10;">
+                                                   <children>
+                                                      <ImageView fx:id="jahrmarktKarte" fitHeight="150.0" fitWidth="94.0" onMouseEntered="#zoomIn" onMouseExited="#zoomOut" onMousePressed="#selectCard" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../basis/Jahrmarkt.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </VBox>
+                                                <VBox fx:id="kapelleVBox" alignment="CENTER" style="-fx-padding: 10;">
+                                                   <children>
+                                                      <ImageView fx:id="kapelleKarte" fitHeight="150.0" fitWidth="94.0" onMouseEntered="#zoomIn" onMouseExited="#zoomOut" onMousePressed="#selectCard" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../basis/Kapelle.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </VBox>
+                                                <VBox fx:id="thronsaalVBox" alignment="CENTER" style="-fx-padding: 10;">
+                                                   <children>
+                                                      <ImageView fx:id="thronsaalKarte" fitHeight="150.0" fitWidth="94.0" onMouseEntered="#zoomIn" onMouseExited="#zoomOut" onMousePressed="#selectCard" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../basis/Thronsaal.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </VBox>
+                                                <VBox fx:id="hexeVBox" alignment="CENTER" style="-fx-padding: 10;">
+                                                   <children>
+                                                      <ImageView fx:id="hexeKarte" fitHeight="150.0" fitWidth="94.0" onMouseEntered="#zoomIn" onMouseExited="#zoomOut" onMousePressed="#selectCard" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../basis/Hexe.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox spacing="10.0">
+                                             <children>
+                                                <VBox fx:id="milizVBox" alignment="CENTER" style="-fx-padding: 10;">
+                                                   <children>
+                                                      <ImageView fx:id="milizKarte" fitHeight="150.0" fitWidth="94.0" onMouseEntered="#zoomIn" onMouseExited="#zoomOut" onMousePressed="#selectCard" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../basis/Miliz.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </VBox>
+                                                <VBox fx:id="burggrabenVBox" alignment="CENTER" style="-fx-padding: 10;">
+                                                   <children>
+                                                      <ImageView fx:id="burggrabenKarte" fitHeight="150.0" fitWidth="94.0" onMouseEntered="#zoomIn" onMouseExited="#zoomOut" onMousePressed="#selectCard" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../basis/Burggraben.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </VBox>
+                                                <VBox fx:id="RatsversammlungVBox" alignment="CENTER" style="-fx-padding: 10;">
+                                                   <children>
+                                                      <ImageView fx:id="ratsversammlungKarte" fitHeight="150.0" fitWidth="94.0" onMouseEntered="#zoomIn" onMouseExited="#zoomOut" onMousePressed="#selectCard" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../basis/Ratsversammlung.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </VBox>
+                                                <VBox fx:id="RatsversammlungVBox1" alignment="CENTER" style="-fx-padding: 10;">
+                                                   <children>
+                                                      <ImageView fx:id="werkstattKarte" fitHeight="150.0" fitWidth="94.0" onMouseEntered="#zoomIn" onMouseExited="#zoomOut" onMousePressed="#selectCard" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../basis/Werkstatt.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </VBox>
+                                                <VBox fx:id="RatsversammlungVBox2" alignment="CENTER" style="-fx-padding: 10;">
+                                                   <children>
+                                                      <ImageView fx:id="umbauKarte" fitHeight="150.0" fitWidth="94.0" onMouseEntered="#zoomIn" onMouseExited="#zoomOut" onMousePressed="#selectCard" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../basis/Umbau.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </VBox>
+                                                <VBox fx:id="RatsversammlungVBox21" alignment="CENTER" style="-fx-padding: 10;">
+                                                   <children>
+                                                      <ImageView fx:id="gaertenKarte" fitHeight="150.0" fitWidth="94.0" onMouseEntered="#zoomIn" onMouseExited="#zoomOut" onMousePressed="#selectCard" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../basis/Gaerten.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox spacing="10.0">
+                                             <children>
+                                                <VBox fx:id="milizVBox1" alignment="CENTER" style="-fx-padding: 10;">
+                                                   <children>
+                                                      <ImageView fx:id="diebKarte" fitHeight="150.0" fitWidth="94.0" onMouseEntered="#zoomIn" onMouseExited="#zoomOut" onMousePressed="#selectCard" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../basis/Dieb.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <Button fx:id="SaveBtnSelbstGe" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#SaveCards" prefHeight="73.0" prefWidth="250.0" text="Speichern" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="26.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <styleClass>
+                                    <String fx:value="animatedBtn" />
+                                    <String fx:value="label" />
+                                 </styleClass>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </Group>
+         </center>
+      </BorderPane>
+   </children>
+   <stylesheets>
+      <URL value="@../CSS/Settings.css" />
+      <URL value="@../CSS/generalStylesheet.css" />
+   </stylesheets>
+</AnchorPane>

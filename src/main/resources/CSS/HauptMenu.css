@@ -1,0 +1,9 @@
+.root {
+    -fx-background-image: url("/src/main/resources/backgrounds/1968b4b3e8ff2b3da95b184af1ed9ca1.jpg");
+    -fx-background-size: cover;
+    -fx-font-family: "Apple Chancery";
+}
+
+.label {
+    -fx-font-size: 25;
+}

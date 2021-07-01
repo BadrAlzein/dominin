@@ -1,0 +1,113 @@
+.label {
+    -fx-font-family: "Apple Chancery";
+    -fx-font-weight: bold;
+}
+
+
+/* white btn with gree Hover*/
+
+.animatedBtn {
+    -fx-background-radius: 30;
+    -fx-background-color: #dad7ce;
+    -fx-font-family: "Apple Chancery";
+    -fx-font-size: 24;
+}
+
+.animatedBtn:hover {
+    -fx-background-color: #95c11f;
+    -fx-font-size: 24;
+}
+
+
+/* white btn with red Hover*/
+
+.exitBtn {
+    -fx-background-color: #dad7ce;
+    -fx-background-radius: 30;
+    -fx-font-size: 20;
+}
+
+.exitBtn:hover {
+    -fx-background-color: #d40b0b;
+    -fx-text-fill: white;
+    -fx-font-size: 22;
+}
+
+
+/*
+#dad7ce
+*/
+
+.animatedTextfield {
+    -fx-background-radius: 30;
+    -fx-font-family: "Apple Chancery";
+    -fx-font-size: 16;
+}
+
+.animatedlabel {
+    -fx-background-color: #dad7ce;
+    -fx-padding: 10;
+}
+
+.scrollpanel {
+    -fx-background-color: transparent;
+}
+
+.scrollpanel .viewport {
+    -fx-background-color: transparent;
+}
+
+.textOnBlack {
+    -fx-text-fill: white;
+    -fx-font-size: 25;
+}
+
+
+/*Vorgefertigte Carten */
+
+.vorgefertigteStack:hover {
+    -fx-background-color: white;
+    -fx-opacity: 0.85;
+}
+
+.vorgefertigteStack:hover .textOnVorgefertigte {
+    -fx-text-fill: black;
+}
+
+.textOnVorgefertigte {
+    -fx-text-fill: white;
+    -fx-font-size: 25;
+}
+
+
+/*Icons*/
+
+
+/*Dark mode*/
+
+.settingsBtnBox {
+    -fx-padding: 6;
+    -fx-background-color: #323234;
+    -fx-background-radius: 40;
+}
+
+.settingsBtnBox:hover {
+    -fx-border-color: white;
+    -fx-border-radius: 30;
+    -fx-border-width: 2;
+}
+
+
+/*ligth mode*/
+
+.settingsLightBtnBox {
+    -fx-padding: 6;
+    -fx-background-color: #dad7ce;
+    -fx-background-radius: 40;
+}
+
+.settingsLightBtnBox:hover {
+    -fx-border-color: #95c11f;
+    -fx-border-radius: 30;
+    -fx-border-width: 3;
+}

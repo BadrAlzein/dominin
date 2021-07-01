@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="552.0" prefWidth="732.0" stylesheets="@../CSS/Chat.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.btu.swp.dominion.game.ChatCon">
+   <children>
+      <BorderPane layoutX="80.0" layoutY="43.0" prefHeight="497.0" prefWidth="632.0">
+         <center>
+            <VBox alignment="BOTTOM_LEFT" prefHeight="489.0" prefWidth="376.0" spacing="5.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="3.0" prefWidth="632.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="34.0" prefWidth="414.0" styleClass="textOnBlack" text="Party Chat" textAlignment="CENTER" textFill="#fdfdfd">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <VBox spacing="10.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <ListView fx:id="lobbyChatList" fixedCellSize="-4.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="432.0" prefWidth="598.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="0.0" prefWidth="355.0" spacing="10.0">
+                           <children>
+                              <TextField fx:id="lobbyTextField" onKeyPressed="#EventHandler" onMousePressed="#ActionHandler" prefHeight="36.0" prefWidth="319.0" promptText="schreibe eine Nachricht..">
+                                 <font>
+                                    <Font name="Apple Chancery" size="16.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="lobbySendBtn" mnemonicParsing="false" onKeyPressed="#EventHandler" onMousePressed="#ActionHandler" styleClass="animatedBtn">
+                                 <graphic>
+                                    <ImageView fx:id="lobbySendBtn2" fitHeight="40.0" fitWidth="64.0" onMousePressed="#ActionHandler" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/icons8-send.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+      <ImageView fx:id="extBtn" accessibleRole="BUTTON" fitHeight="52.0" fitWidth="46.0" layoutX="22.0" layoutY="20.0" onMousePressed="#ActionHandler" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/icons8-x_filled.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
